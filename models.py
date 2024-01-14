@@ -46,6 +46,6 @@ class BattleSnakeDto(BaseModel):
 class BoardDto(BaseModel):
     height: int
     width: int
-    food: list[Position]
-    hazards: list[Position]
-    snakes: list[BattleSnakeDto]
+    food: list[Position] = Field(default_factory=list)
+    hazards: list[Position] = Field(default_factory=list)
+    snakes: list[BattleSnakeDto] = Field(default_factory=list)
